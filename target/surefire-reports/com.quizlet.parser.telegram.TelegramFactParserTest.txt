@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.quizlet.parser.telegram.TelegramFactParserTest
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.193 s -- in com.quizlet.parser.telegram.TelegramFactParserTest

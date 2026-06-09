@@ -1,0 +1,219 @@
+templates:
+  PERSON:
+    - id: person_name_to_fact
+      question: "{name}"
+      answer: "{fact}"
+      required: [name, fact]
+    - id: person_who_question
+      question: "Кто {fact}?"
+      answer: "{name}"
+      required: [name, fact]
+    - id: person_role
+      question: "{name}"
+      answer: "{role}. {fact}"
+      required: [name, role, fact]
+    - id: person_work_author
+      question: "{name}"
+      answer: "\"{title}\", {year}, автор"
+      required: [name, title, year]
+    - id: person_work_author
+      question: "{name}"
+      answer: "Автор «{work}»."
+      required: [name, work]
+    - id: person_reverse_author
+      question: "\"{title}\", {year}, автор"
+      answer: "{name}"
+      required: [name, title, year]
+
+  ARTWORK:
+    - id: artwork_author_to_title
+      question: "{author}"
+      answer: "\"{title}\", {year}. Художник."
+      required: [author, title, year]
+    - id: artwork_title_to_description
+      question: "{title}"
+      answer: "{hint}"
+      required: [title, hint]
+    - id: artwork_title_with_author
+      question: "{title}"
+      answer: "Произведение {author}{year_suffix}."
+      required: [title, author]
+    - id: artwork_year_card
+      question: "\"{title}\", {year}"
+      answer: "Произведение {author}."
+      required: [title, year, author]
+
+  NUMBER:
+    - id: number_to_question
+      question: "{value}"
+      answer: "Сколько {domain}?"
+      required: [value, domain]
+    - id: domain_to_number
+      question: "{domain}"
+      answer: "{value}"
+      required: [value, domain]
+    - id: number_with_hint
+      question: "{value}"
+      answer: "{hint}"
+      required: [value, hint]
+    - id: measure_to_value
+      question: "{domain}"
+      answer: "{value} {unit}"
+      required: [value, domain, unit]
+
+  YEAR:
+    - id: year_to_event_question
+      question: "{year}"
+      answer: "В каком году {event}?"
+      required: [year, event]
+    - id: event_to_year
+      question: "{event}"
+      answer: "{year}"
+      required: [year, event]
+    - id: year_nickname
+      question: "{year}"
+      answer: "Какой год получил прозвище \"{alias}\"?"
+      required: [year, alias]
+    - id: nickname_to_year
+      question: "{alias}"
+      answer: "{year}"
+      required: [year, alias]
+
+  NICKNAME:
+    - id: nickname_to_entity
+      question: "{alias}"
+      answer: "Прозвище {entity}."
+      required: [alias, entity]
+    - id: entity_to_nickname
+      question: "{entity}"
+      answer: "{alias}"
+      required: [alias, entity]
+    - id: nickname_fact
+      question: "{alias}"
+      answer: "{fact}"
+      required: [alias, fact]
+
+  TRANSLATION:
+    - id: term_to_meaning
+      question: "{term}"
+      answer: "{meaning}"
+      required: [term, meaning]
+    - id: meaning_to_term
+      question: "{meaning}"
+      answer: "{term}"
+      required: [term, meaning]
+    - id: translate_question
+      question: "{term}"
+      answer: "Как переводится {source_phrase}?"
+      required: [term, source_phrase]
+    - id: say_in_language
+      question: "Скажите по-{language} \"{meaning}\""
+      answer: "{term}"
+      required: [term, meaning, language]
+
+  LOCATION:
+    - id: place_to_fact
+      question: "{place}"
+      answer: "{fact}"
+      required: [place, fact]
+    - id: fact_to_place
+      question: "{fact}"
+      answer: "{place}"
+      required: [place, fact]
+    - id: place_nickname
+      question: "{place}"
+      answer: "\"{alias}\" — прозвище города."
+      required: [place, alias]
+    - id: nickname_to_place
+      question: "{alias}"
+      answer: "{place}"
+      required: [place, alias]
+
+  QUOTE:
+    - id: quote_to_author
+      question: "{quote}"
+      answer: "{author}"
+      required: [quote, author]
+    - id: author_to_quote
+      question: "{author}"
+      answer: "{quote}"
+      required: [quote, author]
+    - id: quote_to_work
+      question: "{quote}"
+      answer: "Цитата из \"{work}\"."
+      required: [quote, work]
+    - id: work_to_quote
+      question: "{work}"
+      answer: "{quote}"
+      required: [quote, work]
+    - id: continue_quote
+      question: "{quote_start}"
+      answer: "{quote_end}"
+      required: [quote_start, quote_end]
+
+  TERM:
+    - id: term_to_definition
+      question: "{term}"
+      answer: "{fact}"
+      required: [term, fact]
+    - id: definition_to_term
+      question: "{fact}"
+      answer: "{term}"
+      required: [term, fact]
+    - id: term_with_hint
+      question: "{term}"
+      answer: "{fact} {answerHint}"
+      required: [term, fact]
+
+  RELATION:
+    - id: located_in_parent
+      question: "{child}"
+      answer: "{child} находится {parent:prepositional_phrase}."
+      required: [child, parent]
+      relations: [LOCATED_IN]
+    - id: located_in_child
+      question: "{parent}"
+      answer: "{child} находится на {parent:pronoun_prepositional}."
+      required: [child, parent]
+      relations: [LOCATED_IN]
+    - id: child_on_parent
+      question: "{child}"
+      answer: "На {parent:prepositional} находится {child:pronoun_nominative}."
+      required: [child, parent]
+      relations: [LOCATED_IN]
+    - id: named_after
+      question: "{target}"
+      answer: "{target} назван в честь {source:genitive}."
+      required: [target, source]
+      relations: [NAMED_AFTER]
+    - id: named_after_reverse
+      question: "{source}"
+      answer: "В честь {source:genitive} назван {target}."
+      required: [target, source]
+      relations: [NAMED_AFTER]
+    - id: author_of
+      question: "{author}"
+      answer: "Автор \"{title}\"."
+      required: [author, title]
+      relations: [AUTHOR_OF, CREATED_BY]
+    - id: title_by_author
+      question: "{title}"
+      answer: "Произведение {author:genitive}."
+      required: [author, title]
+      relations: [AUTHOR_OF, CREATED_BY]
+    - id: plural_named_after
+      question: "{target}"
+      answer: "Все ОНИ названы в честь {source:genitive}."
+      required: [target, source]
+      relations: [NAMED_AFTER]
+    - id: plural_named_after_reverse
+      question: "{source}"
+      answer: "{target} названы в честь {source:pronoun_genitive}."
+      required: [target, source]
+      relations: [NAMED_AFTER]
+
+computed_fields:
+  year_suffix:
+    expression: "year != null ? ', ' + year : ''"
+  source_phrase:
+    expression: "extra.source_phrase != null ? extra.source_phrase : 'с ' + term"

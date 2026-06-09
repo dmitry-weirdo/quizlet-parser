@@ -1,0 +1,4 @@
+auto=3289
+pending=2152
+batch=pending-batch-01.json (20 examples)
+next_action=review batch file and reply with corrections

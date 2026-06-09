@@ -1,0 +1,4 @@
+com\quizlet\parser\generator\CardGeneratorTest.class
+com\quizlet\parser\telegram\TelegramFactParserTest.class
+com\quizlet\parser\examples\ParsingExamplesWriterTest.class
+com\quizlet\parser\examples\ParsingExamplesGoldenTest.class
