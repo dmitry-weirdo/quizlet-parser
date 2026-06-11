@@ -1,0 +1,22 @@
+[
+  {"answer": "Фрэнсис Бэкон", "type": "PERSONALIA_MALE"},
+  {"answer": "Хорхе Луис Борхес", "type": "PERSONALIA_MALE"},
+  {"answer": "Гефест", "type": "GOD"},
+  {"answer": "мандала", "type": ""},
+  {"answer": "8", "type": "NUMBER"},
+  {"answer": "Тиресий", "type": "CHARACTER_MALE"},
+  {"answer": "Фаэтон", "type": "CHARACTER_MALE"},
+  {"answer": "1967", "type": "YEAR"},
+  {"answer": "Авраам Линкольн", "type": "PERSONALIA_MALE"},
+  {"answer": "Агамемнон", "type": "CHARACTER_MALE"},
+  {"answer": "Анатомия меланхолии", "type": ""},
+  {"answer": "Антонио Гауди", "type": "PERSONALIA_MALE"},
+  {"answer": "Бирнамский лес", "type": ""},
+  {"answer": "Вересковый мед", "type": ""},
+  {"answer": "Двенадцать разгневанных мужчин", "type": "MOVIE"},
+  {"answer": "омела", "type": ""},
+  {"answer": "Пигмалион", "type": "CHARACTER_MALE"},
+  {"answer": "рупия", "type": ""},
+  {"answer": "Филадельфия", "type": "CITY"},
+  {"answer": "Шекспир", "type": "PERSONALIA_MALE"}
+]
