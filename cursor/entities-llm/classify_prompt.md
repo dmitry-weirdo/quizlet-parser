@@ -6,7 +6,7 @@
 
 ## Допустимые типы
 
-`NUMBER`, `YEAR`, `DATE`, `CHARACTER_MALE`, `CHARACTER_FEMALE`, `BRAND`, `NICKNAME`, `IDIOM`, `COUNTRY`, `CITY`, `STATE`, `STREET`, `PERSONALIA_MALE`, `PERSONALIA_FEMALE`, `GOD`, `GODDESS`, `MOVIE`, `PAINTING`, `ENGRAVING`, `QUOTE`, `SONG`, `LANGUAGE`, `SHIP`, `AIRPLANE`, `THEATRICAL_PIECE`, `NOVELLA`, `NOVEL`, `POEM`, `BOOK`, `GAME`, `ILLNESS`, `BATTLE`, `MILITARY_OPERATION`, `CURRENCY`, `AWARD`, `ORDER`, `TEAM`, `RACE`, `BUILDING`, `SCULPTURE`, `CLOTHING`
+`NUMBER`, `YEAR`, `DATE`, `CHARACTER_MALE`, `CHARACTER_FEMALE`, `BRAND`, `NICKNAME`, `IDIOM`, `COUNTRY`, `CITY`, `STATE`, `STREET`, `RIVER`, `PERSONALIA_MALE`, `PERSONALIA_FEMALE`, `GOD`, `GODDESS`, `NATIONALITY`, `MOVIE`, `CARTOON`, `PAINTING`, `ENGRAVING`, `QUOTE`, `SONG`, `MUSICAL_BAND`, `LANGUAGE`, `SHIP`, `AIRPLANE`, `THEATRICAL_PIECE`, `NOVELLA`, `SHORT_STORY`, `ARTICLE`, `ESSAY`, `NOVEL`, `POEM`, `BOOK`, `SPEECH`, `GAME`, `ILLNESS`, `BATTLE`, `MILITARY_OPERATION`, `CURRENCY`, `AWARD`, `ORDER`, `TEAM`, `RACE`, `BUILDING`, `SCULPTURE`, `CLOTHING`, `ABBREVIATION`, `EFFECT`, `INDEX`, `EXPERIMENT`, `THEOREM`, `TRIAL`, `COLOR`
 
 Пустая строка `""` — если тип не определён.
 
@@ -14,7 +14,7 @@
 
 1. **Род и падеж не кодируй** — только тип.
 2. **Составные ответы** (`A / B`, `A и B`) → `""`.
-3. **Общие термины** без типа в guide → `""`. Если тип есть в guide — используй его (роман → `NOVEL`, битва → `BATTLE`, Wordle → `GAME`, рупия → `CURRENCY`).
+3. **Общие термины** без типа в guide → `""`. Если тип есть в guide — используй его (роман → `NOVEL`, рассказ → `SHORT_STORY`, речь → `SPEECH`, группа → `MUSICAL_BAND`, цвет → `COLOR`).
 4. **Персонаж vs персоналия**: вымышленный → `CHARACTER_*`; реальный человек → `PERSONALIA_*`.
 5. **Мифология**: бог/богиня → `GOD` / `GODDESS`; мифический герой → `CHARACTER_*`.
 6. Смотри на вопрос: «Близнецы» + Шварценеггер → `MOVIE`; «14» + восьмитысячники → `NUMBER`.
