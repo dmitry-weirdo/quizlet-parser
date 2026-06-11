@@ -91,7 +91,7 @@ def tokenize(text: str) -> list[str]:
 
 
 def cognate_overlap(question: str, answer: str) -> list[str]:
-    """Return overlapping tokens / stems between question and answer."""
+    """Overlapping tokens/stems between question and answer of one card pair only."""
     q = strip_placeholders(question)
     a = norm(answer)
     if len(a) < 2:

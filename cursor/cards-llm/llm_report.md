@@ -1,8 +1,7 @@
-# LLM report: cards-llm pilot (run 3)
+# LLM report: cards-llm pilot
 
 - Examples: **20**
 - Cards: **70**
-- Lint: **OK** (однокоренность во всех парах)
 
 ## Calls
 
