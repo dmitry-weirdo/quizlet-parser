@@ -41,6 +41,21 @@ VALID_TYPES = {
     "QUOTE",
     "SONG",
     "LANGUAGE",
+    "SHIP",
+    "AIRPLANE",
+    "THEATRICAL_PIECE",
+    "NOVELLA",
+    "NOVEL",
+    "POEM",
+    "GAME",
+    "ILLNESS",
+    "BATTLE",
+    "MILITARY_OPERATION",
+    "CURRENCY",
+    "AWARD",
+    "ORDER",
+    "TEAM",
+    "RACE",
 }
 
 TYPE_ORDER = [t for t in VALID_TYPES if t]

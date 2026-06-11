@@ -6,7 +6,7 @@
 
 ## Допустимые типы
 
-`NUMBER`, `YEAR`, `DATE`, `CHARACTER_MALE`, `CHARACTER_FEMALE`, `BRAND`, `NICKNAME`, `IDIOM`, `COUNTRY`, `CITY`, `STATE`, `PERSONALIA_MALE`, `PERSONALIA_FEMALE`, `GOD`, `GODDESS`, `MOVIE`, `PAINTING`, `ENGRAVING`, `QUOTE`, `SONG`, `LANGUAGE`
+`NUMBER`, `YEAR`, `DATE`, `CHARACTER_MALE`, `CHARACTER_FEMALE`, `BRAND`, `NICKNAME`, `IDIOM`, `COUNTRY`, `CITY`, `STATE`, `PERSONALIA_MALE`, `PERSONALIA_FEMALE`, `GOD`, `GODDESS`, `MOVIE`, `PAINTING`, `ENGRAVING`, `QUOTE`, `SONG`, `LANGUAGE`, `SHIP`, `AIRPLANE`, `THEATRICAL_PIECE`, `NOVELLA`, `NOVEL`, `POEM`, `GAME`, `ILLNESS`, `BATTLE`, `MILITARY_OPERATION`, `CURRENCY`, `AWARD`, `ORDER`, `TEAM`, `RACE`
 
 Пустая строка `""` — если тип не определён.
 
@@ -14,7 +14,7 @@
 
 1. **Род и падеж не кодируй** — только тип.
 2. **Составные ответы** (`A / B`, `A и B`) → `""`.
-3. **Общие термины** без типа в guide (турнюр, машина Голдберга) → `""`.
+3. **Общие термины** без типа в guide → `""`. Если тип есть в guide — используй его (роман → `NOVEL`, битва → `BATTLE`, Wordle → `GAME`, рупия → `CURRENCY`).
 4. **Персонаж vs персоналия**: вымышленный → `CHARACTER_*`; реальный человек → `PERSONALIA_*`.
 5. **Мифология**: бог/богиня → `GOD` / `GODDESS`; мифический герой → `CHARACTER_*`.
 6. Смотри на вопрос: «Близнецы» + Шварценеггер → `MOVIE`; «14» + восьмитысячники → `NUMBER`.
