@@ -1,0 +1,55 @@
+[
+  {
+    "message_id": 3666,
+    "text": "Кроткие унаследуют землю",
+    "links": [],
+    "tags_hint": [
+      "text-only"
+    ],
+    "has_link": false,
+    "link_only": false
+  },
+  {
+    "message_id": 4507,
+    "text": "https://ru.wikipedia.org/wiki/%D0%AD%D1%84%D1%84%D0%B5%D0%BA%D1%82_%D0%A0%D0%B8%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D0%BC%D0%B0%D0%BD%D0%B0",
+    "links": [
+      "https://ru.wikipedia.org/wiki/%D0%AD%D1%84%D1%84%D0%B5%D0%BA%D1%82_%D0%A0%D0%B8%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D0%BC%D0%B0%D0%BD%D0%B0"
+    ],
+    "tags_hint": [
+      "link-only"
+    ],
+    "has_link": true,
+    "link_only": true
+  },
+  {
+    "message_id": -999898727,
+    "text": "искать такси — палиндром",
+    "links": [],
+    "tags_hint": [
+      "text-only"
+    ],
+    "has_link": false,
+    "link_only": false
+  },
+  {
+    "message_id": 843,
+    "text": "Стивенсон написал «Клуб Самоубийц»",
+    "links": [],
+    "tags_hint": [
+      "text-only"
+    ],
+    "has_link": false,
+    "link_only": false
+  },
+  {
+    "message_id": 1455,
+    "text": "Комментарий: По легенде, взгляд василиска превращает в камень. Венский василиск окаменел, когда увидел свое отражение в зеркале.",
+    "links": [],
+    "tags_hint": [
+      "text-only",
+      "question"
+    ],
+    "has_link": false,
+    "link_only": false
+  }
+]

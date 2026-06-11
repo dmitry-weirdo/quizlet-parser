@@ -1,0 +1,57 @@
+[
+  {
+    "message_id": 2343,
+    "text": "https://aviaforum.ru/threads/artefakty-sovetskogo-aehroflota-starye-bilety-birki-i-t-d.24557/page-112#post-2628572 \n\nв ранних советских самолетах пассажирам давали пакетики для авторучек, на случай если ручка протечет",
+    "links": [
+      "https://aviaforum.ru/threads/artefakty-sovetskogo-aehroflota-starye-bilety-birki-i-t-d.24557/page-112#post-2628572"
+    ],
+    "tags_hint": [
+      "link+comment"
+    ],
+    "has_link": true,
+    "link_only": false
+  },
+  {
+    "message_id": 4115,
+    "text": "плохим детям Санта вместо подарков дарит уголь",
+    "links": [],
+    "tags_hint": [
+      "text-only"
+    ],
+    "has_link": false,
+    "link_only": false
+  },
+  {
+    "message_id": -999905327,
+    "text": "https://ru.wikipedia.org/wiki/%D0%9E%D0%B3%D1%83%D1%80%D1%87%D0%B8%D0%BA_%D0%A0%D0%B8%D0%BA — культовая серия Рика и Морти",
+    "links": [
+      "https://ru.wikipedia.org/wiki/%D0%9E%D0%B3%D1%83%D1%80%D1%87%D0%B8%D0%BA_%D0%A0%D0%B8%D0%BA"
+    ],
+    "tags_hint": [
+      "link+comment"
+    ],
+    "has_link": true,
+    "link_only": false
+  },
+  {
+    "message_id": 1128,
+    "text": "Гроздь светофоров в Лондоне — где был первый светофор",
+    "links": [],
+    "tags_hint": [
+      "text-only",
+      "question"
+    ],
+    "has_link": false,
+    "link_only": false
+  },
+  {
+    "message_id": 2161,
+    "text": "Бангкок — город ангелов",
+    "links": [],
+    "tags_hint": [
+      "text-only"
+    ],
+    "has_link": false,
+    "link_only": false
+  }
+]

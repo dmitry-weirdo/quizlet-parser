@@ -1,0 +1,55 @@
+[
+  {
+    "message_id": 3355,
+    "text": "Аква Вита — медуза (по-португальски?)",
+    "links": [],
+    "tags_hint": [
+      "text-only",
+      "question"
+    ],
+    "has_link": false,
+    "link_only": false
+  },
+  {
+    "message_id": 4888,
+    "text": "Марсий — как святой варфоломей, но языческий\n\nhttps://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%80%D1%81%D0%B8%D0%B9\n\nс него снял кожу Аполлон после того, как Марсий проиграл ему в музыкальном состязании.",
+    "links": [
+      "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%80%D1%81%D0%B8%D0%B9"
+    ],
+    "tags_hint": [
+      "link+comment"
+    ],
+    "has_link": true,
+    "link_only": false
+  },
+  {
+    "message_id": 1049,
+    "text": "Морские желуди и проигрыш Цусима",
+    "links": [],
+    "tags_hint": [
+      "text-only"
+    ],
+    "has_link": false,
+    "link_only": false
+  },
+  {
+    "message_id": 1311,
+    "text": "Боро — 5 округов Нью-Йорка",
+    "links": [],
+    "tags_hint": [
+      "text-only"
+    ],
+    "has_link": false,
+    "link_only": false
+  },
+  {
+    "message_id": 5040,
+    "text": "ФК Гамбург — прозвище Динозавры (очень долго находились в высшей лиге, 55 лет подряд)",
+    "links": [],
+    "tags_hint": [
+      "text-only"
+    ],
+    "has_link": false,
+    "link_only": false
+  }
+]
