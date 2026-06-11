@@ -1,0 +1,39 @@
+{
+  "total_cards": 7222,
+  "unique_answers": 6270,
+  "mapped": 3054,
+  "unmapped": 3216,
+  "mapped_percent": 48.7,
+  "per_type": {
+    "NUMBER": 42,
+    "YEAR": 60,
+    "DATE": 20,
+    "CHARACTER_MALE": 30,
+    "CHARACTER_FEMALE": 21,
+    "BRAND": 2,
+    "NICKNAME": 9,
+    "IDIOM": 0,
+    "COUNTRY": 42,
+    "CITY": 30,
+    "STATE": 16,
+    "PERSONALIA_MALE": 2589,
+    "PERSONALIA_FEMALE": 86,
+    "GOD": 27,
+    "GODDESS": 17,
+    "MOVIE": 13,
+    "PAINTING": 12,
+    "ENGRAVING": 1,
+    "QUOTE": 0,
+    "SONG": 34,
+    "LANGUAGE": 3
+  },
+  "source_files": [
+    "ЧГК 2023.1.txt",
+    "ЧГК 2023.2.txt",
+    "ЧГК 2023.3.txt",
+    "ЧГК 2023.4.txt",
+    "ЧГК 2024.1.txt",
+    "ЧГК-2.txt",
+    "ЧГК.txt"
+  ]
+}
