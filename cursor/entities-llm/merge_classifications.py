@@ -31,6 +31,7 @@ VALID_TYPES = {
     "COUNTRY",
     "CITY",
     "STATE",
+    "STREET",
     "PERSONALIA_MALE",
     "PERSONALIA_FEMALE",
     "GOD",
@@ -47,6 +48,7 @@ VALID_TYPES = {
     "NOVELLA",
     "NOVEL",
     "POEM",
+    "BOOK",
     "GAME",
     "ILLNESS",
     "BATTLE",
@@ -56,9 +58,12 @@ VALID_TYPES = {
     "ORDER",
     "TEAM",
     "RACE",
+    "BUILDING",
+    "SCULPTURE",
+    "CLOTHING",
 }
 
-TYPE_ORDER = [t for t in VALID_TYPES if t]
+TYPE_ORDER = sorted(t for t in VALID_TYPES if t)
 
 
 def main() -> int:
@@ -133,7 +138,8 @@ def main() -> int:
     }
 
     (ROOT / "by-type.json").write_text(
-        json.dumps(by_type, ensure_ascii=False, indent=2), encoding="utf-8"
+        json.dumps({k: by_type[k] for k in sorted(by_type)}, ensure_ascii=False, indent=2),
+        encoding="utf-8",
     )
     (ROOT / "unmapped.json").write_text(
         json.dumps(unmapped, ensure_ascii=False, indent=2), encoding="utf-8"
