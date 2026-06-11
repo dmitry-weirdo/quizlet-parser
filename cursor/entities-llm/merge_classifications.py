@@ -2,9 +2,17 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 from collections import Counter
 from pathlib import Path
+
+
+def _batch_priority(name: str) -> int:
+    if name == "batch-pilot.json":
+        return 0
+    m = re.match(r"batch-(\d+)\.json", name)
+    return int(m.group(1)) if m else 999
 
 ROOT = Path(__file__).parent
 QUEUE = ROOT / "entities_queue.json"
@@ -49,7 +57,7 @@ def main() -> int:
     queue_data = json.loads(QUEUE.read_text(encoding="utf-8"))
     expected_answers = {e["answer"] for e in queue_data["entities"]}
 
-    batch_files = sorted(CLASS_DIR.glob("batch-*.json"))
+    batch_files = sorted(CLASS_DIR.glob("batch-*.json"), key=lambda p: _batch_priority(p.name))
     if not batch_files:
         print("No classifications yet", file=sys.stderr)
         return 1
@@ -65,8 +73,6 @@ def main() -> int:
             if typ not in VALID_TYPES:
                 errors.append(f"{bf.name}: invalid type {typ!r} for {ans!r}")
                 typ = ""
-            if ans in classified:
-                errors.append(f"duplicate answer {ans!r}")
             classified[ans] = typ
 
     missing = expected_answers - set(classified.keys())
@@ -144,7 +150,7 @@ def main() -> int:
 ```bash
 python cursor/entities-llm/extract_for_llm.py
 python cursor/entities-llm/split_batches.py
-# агент: batches/batch-NNN.json -> classifications/batch-NNN.json
+# LLM-агент: batches/batch-NNN.json -> classifications/batch-NNN.json
 python cursor/entities-llm/merge_classifications.py
 ```
 

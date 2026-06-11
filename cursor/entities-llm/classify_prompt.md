@@ -37,4 +37,16 @@ Golden: [`parsing-examples/parsing-examples.json`](../../parsing-examples/parsin
 
 ## Pilot
 
-Для проверки пайплайна: `batches/batch-pilot.json` (20 сущностей, топ по frequency) → `classifications/batch-pilot.json`.
+`batches/batch-pilot.json` (20 сущностей) → `classifications/batch-pilot.json`.
+
+## Важно
+
+Классификацию выполняет **LLM-агент** (Cursor), не Python-эвристики.
+
+После записи `classifications/batch-NNN.json`:
+
+```bash
+python cursor/entities-llm/merge_classifications.py
+```
+
+Приоритет merge: `batch-pilot` < `batch-001` < `batch-002` … (поздний перекрывает ранний).

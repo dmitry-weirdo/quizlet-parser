@@ -9,18 +9,18 @@
 | Метрика | Значение |
 |---------|----------|
 | Уникальных ответов | 6270 |
-| Классифицировано | 20 (0.3%) |
+| Классифицировано | 375 (6.0%) |
 | Pilot (batch-pilot) | 20 сущностей |
-| Батчей готово | 0 / 51 |
-| С типом | 14 |
-| Unmapped | 6 |
+| Батчей готово | 3 / 51 |
+| С типом | 221 |
+| Unmapped | 154 |
 
 ## Workflow
 
 ```bash
 python cursor/entities-llm/extract_for_llm.py
 python cursor/entities-llm/split_batches.py
-# агент: batches/batch-NNN.json -> classifications/batch-NNN.json
+# LLM-агент: batches/batch-NNN.json -> classifications/batch-NNN.json
 python cursor/entities-llm/merge_classifications.py
 ```
 
