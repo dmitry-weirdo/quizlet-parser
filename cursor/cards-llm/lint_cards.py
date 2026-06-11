@@ -86,17 +86,46 @@ def strip_placeholders(q: str) -> str:
     )
 
 
-def answer_tokens_in_question(question: str, answer: str) -> bool:
+def tokenize(text: str) -> list[str]:
+    return re.findall(r"[a-zA-Zа-яА-ЯёЁ0-9]+", norm(text))
+
+
+def cognate_overlap(question: str, answer: str) -> list[str]:
+    """Return overlapping tokens / stems between question and answer."""
     q = strip_placeholders(question)
     a = norm(answer)
-    if len(a) < 3:
-        return False
+    if len(a) < 2:
+        return []
+    hits: list[str] = []
     if a in q:
-        return True
-    for word in re.findall(r"[a-zA-Zа-яА-ЯёЁ]{4,}", a):
-        if word in q:
-            return True
-    return False
+        hits.append(f"полный ответ «{answer}»")
+    q_tokens = tokenize(q)
+    a_tokens = tokenize(a)
+    for aw in a_tokens:
+        if len(aw) < 3:
+            continue
+        for qw in q_tokens:
+            if aw == qw:
+                hits.append(aw)
+                continue
+            n = min(len(aw), len(qw), 6)
+            for length in range(6, 3, -1):
+                if len(aw) >= length and len(qw) >= length:
+                    if aw[:length] == qw[:length]:
+                        hits.append(f"{qw}↔{aw}")
+                        break
+            else:
+                if len(aw) >= 4 and aw in qw:
+                    hits.append(f"{aw}⊂{qw}")
+                elif len(qw) >= 4 and qw in aw:
+                    hits.append(f"{qw}⊂{aw}")
+    seen: set[str] = set()
+    out: list[str] = []
+    for h in hits:
+        if h not in seen:
+            seen.add(h)
+            out.append(h)
+    return out
 
 
 def word_count(s: str) -> int:
@@ -140,8 +169,11 @@ def lint_examples(examples: list) -> list[str]:
                 issues.append(f"{prefix}: содержит «что такое»")
             if re.search(r"\bзвали\s+ОН\b", q, re.I):
                 issues.append(f"{prefix}: «звали ОН» → звали ТАК")
-            if answer_tokens_in_question(q, a):
-                issues.append(f"{prefix}: ответ «{a}» (или часть) в вопросе")
+            overlap = cognate_overlap(q, a)
+            if overlap:
+                issues.append(
+                    f"{prefix}: однокоренные слова в вопросе и ответе: {', '.join(overlap[:5])}"
+                )
 
             an = norm(a)
             if (

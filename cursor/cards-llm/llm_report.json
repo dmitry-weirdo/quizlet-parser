@@ -1,116 +1,89 @@
 {
-  "run_id": "cards-llm-pilot-2026-06-11",
-  "pricing_note": "cost_usd.exact is null for cursor_agent; estimated uses chars/4 and PRICING table",
+  "run_id": "cards-llm-pilot-2026-06-11-run3",
+  "pricing_note": "cost_usd.exact is null for cursor_agent; estimated uses chars/4",
   "calls": [
     {
-      "id": "gen-batch-001",
-      "timestamp": "2026-06-11T12:00:00+00:00",
+      "id": "gen-batch-001-v3",
+      "timestamp": "2026-06-11T18:00:00+00:00",
       "provider": "cursor_agent",
       "model": "composer-2.5",
-      "operation": "generate_cards",
-      "parameters": {"batch": "batch-001.json", "messages": 5, "mode": "agent"},
+      "operation": "regenerate_cards",
+      "parameters": {"batch": "batch-001.json", "messages": 5, "mode": "agent", "rules_version": "quizlet-rules 13-16"},
       "context_files": [
         "generate_cards_prompt.md",
         "style_samples.json",
         "../../hermes/quizlet-rules.md",
         "../../parsing-examples/parsing-examples.json"
       ],
-      "tool_calls": [
-        {"tool": "WebFetch", "url": "https://ru.wikipedia.org/wiki/%D0%9E%D0%B3%D1%83%D1%80%D1%87%D0%B8%D0%BA_%D0%A0%D0%B8%D0%BA", "purpose": "Pickle Rick episode facts"},
-        {"tool": "WebSearch", "url": "", "purpose": "first traffic light London Parliament"}
-      ],
-      "input_chars": 18500,
-      "output_chars": 4200,
-      "tokens": {"input": null, "output": null, "estimated_total": 5675},
-      "cost_usd": {"exact": null, "estimated": null}
-    },
-    {
-      "id": "gen-batch-002",
-      "timestamp": "2026-06-11T12:15:00+00:00",
-      "provider": "cursor_agent",
-      "model": "composer-2.5",
-      "operation": "generate_cards",
-      "parameters": {"batch": "batch-002.json", "messages": 5, "mode": "agent"},
-      "context_files": [
-        "generate_cards_prompt.md",
-        "style_samples.json",
-        "../../hermes/quizlet-rules.md",
-        "../../parsing-examples/parsing-examples.json"
-      ],
-      "tool_calls": [
-        {"tool": "WebFetch", "url": "https://ru.wikipedia.org/wiki/%D0%AD%D1%84%D1%84%D0%B5%D0%BA%D1%82_%D0%A0%D0%B8%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D0%BC%D0%B0%D0%BD%D0%B0", "purpose": "Ringelmann effect"}
-      ],
-      "input_chars": 17200,
-      "output_chars": 3800,
-      "tokens": {"input": null, "output": null, "estimated_total": 5250},
-      "cost_usd": {"exact": null, "estimated": null}
-    },
-    {
-      "id": "gen-batch-003",
-      "timestamp": "2026-06-11T12:30:00+00:00",
-      "provider": "cursor_agent",
-      "model": "composer-2.5",
-      "operation": "generate_cards",
-      "parameters": {"batch": "batch-003.json", "messages": 5, "mode": "agent"},
-      "context_files": [
-        "generate_cards_prompt.md",
-        "style_samples.json",
-        "../../hermes/quizlet-rules.md",
-        "../../parsing-examples/parsing-examples.json"
-      ],
-      "tool_calls": [
-        {"tool": "WebFetch", "url": "https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B8%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D1%8F_%D0%B1%D0%B0%D1%80%D0%BE%D0%BD%D0%B0_%D0%9C%D1%8E%D0%BD%D1%85%D0%B3%D0%B0%D1%83%D0%B7%D0%B5%D0%BD%D0%B0", "purpose": "Munchausen book"},
-        {"tool": "WebFetch", "url": "https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BB%D0%B5%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0_%D0%A6%D0%B8%D0%BC%D0%BC%D0%B5%D1%80%D0%BC%D0%B0%D0%BD%D0%B0", "purpose": "Zimmermann telegram"},
-        {"tool": "WebFetch", "url": "https://en.wikipedia.org/wiki/Koek-en-zopie", "purpose": "Koek-en-zopie"},
-        {"tool": "WebSearch", "url": "", "purpose": "Lake Vostok cold record"}
-      ],
-      "input_chars": 21000,
-      "output_chars": 5100,
-      "tokens": {"input": null, "output": null, "estimated_total": 6525},
-      "cost_usd": {"exact": null, "estimated": null}
-    },
-    {
-      "id": "gen-batch-004",
-      "timestamp": "2026-06-11T12:45:00+00:00",
-      "provider": "cursor_agent",
-      "model": "composer-2.5",
-      "operation": "generate_cards",
-      "parameters": {"batch": "batch-004.json", "messages": 5, "mode": "agent"},
-      "context_files": [
-        "generate_cards_prompt.md",
-        "style_samples.json",
-        "../../hermes/quizlet-rules.md",
-        "../../parsing-examples/parsing-examples.json"
-      ],
-      "tool_calls": [
-        {"tool": "WebFetch", "url": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%80%D1%81%D0%B8%D0%B9", "purpose": "Marsyas myth"},
-        {"tool": "WebSearch", "url": "", "purpose": "barnacles Tsushima, agua-viva, Hamburg dinosaurs"}
-      ],
-      "input_chars": 17800,
-      "output_chars": 4500,
-      "tokens": {"input": null, "output": null, "estimated_total": 5575},
-      "cost_usd": {"exact": null, "estimated": null}
-    },
-    {
-      "id": "lint-fix-lake-vostok",
-      "timestamp": "2026-06-11T12:50:00+00:00",
-      "provider": "cursor_agent",
-      "model": "composer-2.5",
-      "operation": "fix_lint",
-      "parameters": {"examples": ["lake-vostok-cold", "zimmermann-telegram", "soviet-aeroflot-pen-packets"], "mode": "agent"},
-      "context_files": ["lint_cards.py", "generations/batch-003.json"],
       "tool_calls": [],
-      "input_chars": 2500,
-      "output_chars": 800,
-      "tokens": {"input": null, "output": null, "estimated_total": 825},
+      "input_chars": 22000,
+      "output_chars": 5000,
+      "tokens": {"input": null, "output": null, "estimated_total": 6750},
+      "cost_usd": {"exact": null, "estimated": null}
+    },
+    {
+      "id": "gen-batch-002-v3",
+      "timestamp": "2026-06-11T18:10:00+00:00",
+      "provider": "cursor_agent",
+      "model": "composer-2.5",
+      "operation": "regenerate_cards",
+      "parameters": {"batch": "batch-002.json", "messages": 5, "mode": "agent", "rules_version": "quizlet-rules 13-16"},
+      "context_files": [
+        "generate_cards_prompt.md",
+        "../../hermes/quizlet-rules.md",
+        "../../parsing-examples/parsing-examples.json"
+      ],
+      "tool_calls": [],
+      "input_chars": 20000,
+      "output_chars": 4400,
+      "tokens": {"input": null, "output": null, "estimated_total": 6100},
+      "cost_usd": {"exact": null, "estimated": null}
+    },
+    {
+      "id": "gen-batch-003-v3",
+      "timestamp": "2026-06-11T18:20:00+00:00",
+      "provider": "cursor_agent",
+      "model": "composer-2.5",
+      "operation": "regenerate_cards",
+      "parameters": {"batch": "batch-003.json", "messages": 5, "mode": "agent", "rules_version": "quizlet-rules 13-16"},
+      "context_files": [
+        "generate_cards_prompt.md",
+        "../../hermes/quizlet-rules.md",
+        "../../parsing-examples/parsing-examples.json"
+      ],
+      "tool_calls": [
+        {"tool": "WebFetch", "url": "https://en.wikipedia.org/wiki/Koek-en-zopie", "purpose": "Dutch ice stalls"},
+        {"tool": "WebFetch", "url": "https://ru.wikipedia.org/wiki/Озеро_Восток", "purpose": "Lake Vostok facts"}
+      ],
+      "input_chars": 21500,
+      "output_chars": 5200,
+      "tokens": {"input": null, "output": null, "estimated_total": 6675},
+      "cost_usd": {"exact": null, "estimated": null}
+    },
+    {
+      "id": "gen-batch-004-v3",
+      "timestamp": "2026-06-11T18:30:00+00:00",
+      "provider": "cursor_agent",
+      "model": "composer-2.5",
+      "operation": "regenerate_cards",
+      "parameters": {"batch": "batch-004.json", "messages": 5, "mode": "agent", "rules_version": "quizlet-rules 13-16"},
+      "context_files": [
+        "generate_cards_prompt.md",
+        "../../hermes/quizlet-rules.md",
+        "../../parsing-examples/parsing-examples.json"
+      ],
+      "tool_calls": [],
+      "input_chars": 19800,
+      "output_chars": 4500,
+      "tokens": {"input": null, "output": null, "estimated_total": 6075},
       "cost_usd": {"exact": null, "estimated": null}
     }
   ],
   "totals": {
-    "calls": 5,
-    "wikipedia_fetches": 9,
-    "web_searches": 3,
-    "estimated_tokens_total": 23850,
-    "estimated_cost_usd": null
+    "calls": 4,
+    "cards": 70,
+    "estimated_tokens_total": 25600,
+    "estimated_cost_usd": null,
+    "notes": "Run 3: rules 13-16 (no example 17), strict cognate lint on all Q/A pairs"
   }
 }
