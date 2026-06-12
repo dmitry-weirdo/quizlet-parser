@@ -3,6 +3,83 @@
 > План реализации системы human-in-the-loop обучения для генерации ЧГК-карточек.
 > Связанные документы: [`text_parsing_guide.md`](text_parsing_guide.md), [`cursor/cards-llm/README.md`](../cursor/cards-llm/README.md).
 
+## Исходные данные (канонический список)
+
+### Ваши 4 источника — что из них берём
+
+| Источник | Путь в репо | Роль в системе |
+|----------|-------------|----------------|
+| Примеры генерации | [`parsing-examples/parsing-examples.json`](../parsing-examples/parsing-examples.json) | Golden few-shot: `text → entities → cards + logic` (7 шт.) |
+| Правила сущностей | [`docs/text_parsing_guide.md`](text_parsing_guide.md) | Типы entities, вопросные формы (ОН/СТОЛЬКО/ТАМ) — всегда в prompt |
+| Правила карточек | [`hermes/quizlet-rules.md`](../hermes/quizlet-rules.md) | Правила хорошо/плохо, примеры 1–16 — в `knowledge/rules/` |
+| Стиль карточек | [`quizlet-modules/`](../quizlet-modules/) | **7222 готовых пар** `ответ\tвопрос` — эталон формулировок вопросов |
+
+### Важно: quizlet-modules ≠ Telegram-сообщения
+
+В `quizlet-modules/` лежат **уже готовые карточки** без исходного текста:
+
+```
+Мальчик, который выжил	Прозвище Гарри Поттера
+```
+
+**Исходные Telegram-сообщения** для generate берутся из **другого места**:
+
+| Источник | Путь | Роль |
+|----------|------|------|
+| Полный экспорт | [`telegram-export-json/result.json`](../telegram-export-json/result.json) | Все сообщения чата |
+| Очередь на разметку | [`hermes/pending.json`](../hermes/pending.json) | 2152 непокрытых фрагмента |
+| Пилотные кандидаты | [`cursor/cards-llm/candidates.json`](../cursor/cards-llm/candidates.json) | 20 отобранных для MVP (batch 001–002) |
+
+```mermaid
+flowchart TB
+  subgraph inputs_rules ["Правила и эталоны — в prompt всегда / RAG"]
+    PE["parsing-examples.json\n7 golden"]
+    TPG["text_parsing_guide.md\nтипы сущностей"]
+    QR["quizlet-rules.md\nправила карточек"]
+    QRB["quizlet-rules-bad.md\nанти-примеры"]
+    QM["quizlet-modules\n7222 style pairs"]
+  end
+
+  subgraph inputs_generate ["Вход generate — откуда брать ТЕКСТ"]
+    TG["telegram-export-json/result.json"]
+    PEND["hermes/pending.json"]
+    CAND["cards-llm/candidates.json\nMVP: 1–2 батча"]
+  end
+
+  subgraph knowledge_store ["knowledge/ после bootstrap"]
+    KS["rules + examples + style_pairs + review_queue"]
+  end
+
+  inputs_rules --> KS
+  TG --> review_queue["review_queue.json"]
+  PEND --> review_queue
+  CAND --> review_queue
+  review_queue --> generate["generate --batch 001"]
+  KS --> generate
+```
+
+### Дополнительные файлы (уже есть в репо, используем при bootstrap)
+
+| Файл | Зачем |
+|------|-------|
+| [`hermes/quizlet-rules-bad.md`](../hermes/quizlet-rules-bad.md) | Негативные примеры → `knowledge/rules/negative/` |
+| [`cursor/cards-llm/parsing-examples-cursor.json`](../cursor/cards-llm/parsing-examples-cursor.json) | +20 LLM-сгенерированных golden (run 3) |
+| [`cursor/cards-llm/generate_cards_prompt.md`](../cursor/cards-llm/generate_cards_prompt.md) | Операционный чеклист → основа `build_prompt.py` |
+| [`cursor/cards-llm/style_samples.json`](../cursor/cards-llm/style_samples.json) | Уже отобранные 50 пар из quizlet-modules (можно не дублировать) |
+| [`cursor/entities-llm/entities_queue.json`](../cursor/entities-llm/entities_queue.json) | Кэш типов сущностей для ответов из modules |
+| [`cursor/cards-llm/lint_cards.py`](../cursor/cards-llm/lint_cards.py) | Post-generation проверки (без изменений на MVP) |
+
+### MVP generate (1–2 батча): откуда именно
+
+```
+Правила:     parsing-examples.json + text_parsing_guide.md + quizlet-rules.md (+ bad)
+Стиль:       quizlet-modules/ → knowledge/style_pairs.json
+Текст:       cursor/cards-llm/candidates.json  (20 msg, batch 001 = первые 5)
+Не трогаем:  весь telegram export и hermes/pending — до фазы 3
+```
+
+---
+
 ## Короткий ответ: fine-tune, RAG или что-то ещё?
 
 | Подход | Нужен сейчас? | Роль |

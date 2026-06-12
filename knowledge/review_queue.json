@@ -1,0 +1,202 @@
+{
+  "source": "cursor/cards-llm/candidates.json",
+  "items": [
+    {
+      "message_id": 2343,
+      "text": "https://aviaforum.ru/threads/artefakty-sovetskogo-aehroflota-starye-bilety-birki-i-t-d.24557/page-112#post-2628572 \n\nв ранних советских самолетах пассажирам давали пакетики для авторучек, на случай если ручка протечет",
+      "links": [
+        "https://aviaforum.ru/threads/artefakty-sovetskogo-aehroflota-starye-bilety-birki-i-t-d.24557/page-112#post-2628572"
+      ],
+      "tags_hint": [
+        "link+comment"
+      ],
+      "status": "pending"
+    },
+    {
+      "message_id": 4115,
+      "text": "плохим детям Санта вместо подарков дарит уголь",
+      "links": [],
+      "tags_hint": [
+        "text-only"
+      ],
+      "status": "pending"
+    },
+    {
+      "message_id": -999905327,
+      "text": "https://ru.wikipedia.org/wiki/%D0%9E%D0%B3%D1%83%D1%80%D1%87%D0%B8%D0%BA_%D0%A0%D0%B8%D0%BA — культовая серия Рика и Морти",
+      "links": [
+        "https://ru.wikipedia.org/wiki/%D0%9E%D0%B3%D1%83%D1%80%D1%87%D0%B8%D0%BA_%D0%A0%D0%B8%D0%BA"
+      ],
+      "tags_hint": [
+        "link+comment"
+      ],
+      "status": "pending"
+    },
+    {
+      "message_id": 1128,
+      "text": "Гроздь светофоров в Лондоне — где был первый светофор",
+      "links": [],
+      "tags_hint": [
+        "text-only",
+        "question"
+      ],
+      "status": "pending"
+    },
+    {
+      "message_id": 2161,
+      "text": "Бангкок — город ангелов",
+      "links": [],
+      "tags_hint": [
+        "text-only"
+      ],
+      "status": "pending"
+    },
+    {
+      "message_id": 3666,
+      "text": "Кроткие унаследуют землю",
+      "links": [],
+      "tags_hint": [
+        "text-only"
+      ],
+      "status": "pending"
+    },
+    {
+      "message_id": 4507,
+      "text": "https://ru.wikipedia.org/wiki/%D0%AD%D1%84%D1%84%D0%B5%D0%BA%D1%82_%D0%A0%D0%B8%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D0%BC%D0%B0%D0%BD%D0%B0",
+      "links": [
+        "https://ru.wikipedia.org/wiki/%D0%AD%D1%84%D1%84%D0%B5%D0%BA%D1%82_%D0%A0%D0%B8%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D0%BC%D0%B0%D0%BD%D0%B0"
+      ],
+      "tags_hint": [
+        "link-only"
+      ],
+      "status": "pending"
+    },
+    {
+      "message_id": -999898727,
+      "text": "искать такси — палиндром",
+      "links": [],
+      "tags_hint": [
+        "text-only"
+      ],
+      "status": "pending"
+    },
+    {
+      "message_id": 843,
+      "text": "Стивенсон написал «Клуб Самоубийц»",
+      "links": [],
+      "tags_hint": [
+        "text-only"
+      ],
+      "status": "pending"
+    },
+    {
+      "message_id": 1455,
+      "text": "Комментарий: По легенде, взгляд василиска превращает в камень. Венский василиск окаменел, когда увидел свое отражение в зеркале.",
+      "links": [],
+      "tags_hint": [
+        "text-only",
+        "question"
+      ],
+      "status": "pending"
+    },
+    {
+      "message_id": 437,
+      "text": "«Удивительные путешествия на суше и на море, военные походы и весёлые приключения барона фон Мюнхгаузена, о которых он обычно рассказывает за бутылкой в кругу своих друзей» (нем. Wunderbare Reisen zu Wasser und zu Lande. Feldzüge und lustige Abenteuer des Freiherrn von Münchhausen, wie er dieselben bei der Flasche im Zirkel seiner Freunde selbst zu erzählen pfleg), на русском языке обычно сокращённо называемая «Приключения барона Мюнхгаузена» — книга немецких писателей Готтфрида Августа Бюргера и Рудольфа Эриха Распе, опубликованная в 1786 году. \n\nОказывается, не только Распе автор + выучить полное название (особенно, что \"рассказывает за бутылкой в кругу своих друзей\"\n\nhttps://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B8%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D1%8F_%D0%B1%D0%B0%D1%80%D0%BE%D0%BD%D0%B0_%D0%9C%D1%8E%D0%BD%D1%85%D0%B3%D0%B0%D1%83%D0%B7%D0%B5%D0%BD%D0%B0",
+      "links": [
+        "https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B8%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D1%8F_%D0%B1%D0%B0%D1%80%D0%BE%D0%BD%D0%B0_%D0%9C%D1%8E%D0%BD%D1%85%D0%B3%D0%B0%D1%83%D0%B7%D0%B5%D0%BD%D0%B0"
+      ],
+      "tags_hint": [
+        "link+comment"
+      ],
+      "status": "pending"
+    },
+    {
+      "message_id": 5047,
+      "text": "Озеро Восток — холодное",
+      "links": [],
+      "tags_hint": [
+        "text-only"
+      ],
+      "status": "pending"
+    },
+    {
+      "message_id": -999900509,
+      "text": "Yes sir в российской армии превратилось в \"есть\"",
+      "links": [],
+      "tags_hint": [
+        "text-only"
+      ],
+      "status": "pending"
+    },
+    {
+      "message_id": 2216,
+      "text": "https://en.wikipedia.org/wiki/Koek-en-zopie",
+      "links": [
+        "https://en.wikipedia.org/wiki/Koek-en-zopie"
+      ],
+      "tags_hint": [
+        "link-only"
+      ],
+      "status": "pending"
+    },
+    {
+      "message_id": 4214,
+      "text": "https://ru.wikipedia.org/wiki/Телеграмма_Циммермана",
+      "links": [
+        "https://ru.wikipedia.org/wiki/Телеграмма_Циммермана"
+      ],
+      "tags_hint": [
+        "link-only"
+      ],
+      "status": "pending"
+    },
+    {
+      "message_id": 3355,
+      "text": "Аква Вита — медуза (по-португальски?)",
+      "links": [],
+      "tags_hint": [
+        "text-only",
+        "question"
+      ],
+      "status": "pending"
+    },
+    {
+      "message_id": 4888,
+      "text": "Марсий — как святой варфоломей, но языческий\n\nhttps://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%80%D1%81%D0%B8%D0%B9\n\nс него снял кожу Аполлон после того, как Марсий проиграл ему в музыкальном состязании.",
+      "links": [
+        "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%80%D1%81%D0%B8%D0%B9"
+      ],
+      "tags_hint": [
+        "link+comment"
+      ],
+      "status": "pending"
+    },
+    {
+      "message_id": 1049,
+      "text": "Морские желуди и проигрыш Цусима",
+      "links": [],
+      "tags_hint": [
+        "text-only"
+      ],
+      "status": "pending"
+    },
+    {
+      "message_id": 1311,
+      "text": "Боро — 5 округов Нью-Йорка",
+      "links": [],
+      "tags_hint": [
+        "text-only"
+      ],
+      "status": "pending"
+    },
+    {
+      "message_id": 5040,
+      "text": "ФК Гамбург — прозвище Динозавры (очень долго находились в высшей лиге, 55 лет подряд)",
+      "links": [],
+      "tags_hint": [
+        "text-only"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+numpy>=1.24
+# Optional: better RAG embeddings (downloads ~400MB model on first use)
+# sentence-transformers>=2.2.0

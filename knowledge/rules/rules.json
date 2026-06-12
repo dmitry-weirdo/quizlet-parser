@@ -1,0 +1,34 @@
+{
+  "rules": [
+    {
+      "id": "core-quizlet-rules",
+      "text": "См. knowledge/rules/core.md",
+      "type": "positive",
+      "tags": [
+        "cards"
+      ],
+      "enabled": true,
+      "source": "hermes/quizlet-rules.md"
+    },
+    {
+      "id": "entity-types-guide",
+      "text": "См. knowledge/rules/entity_types.md",
+      "type": "reference",
+      "tags": [
+        "entities"
+      ],
+      "enabled": true,
+      "source": "docs/text_parsing_guide.md"
+    },
+    {
+      "id": "negative-bad-examples",
+      "text": "См. knowledge/rules/negative/bad.md",
+      "type": "negative",
+      "tags": [
+        "cards"
+      ],
+      "enabled": true,
+      "source": "hermes/quizlet-rules-bad.md"
+    }
+  ]
+}

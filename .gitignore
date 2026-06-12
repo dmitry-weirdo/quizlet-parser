@@ -1,0 +1,4 @@
+knowledge/.index/
+__pycache__/
+*.pyc
+.venv/

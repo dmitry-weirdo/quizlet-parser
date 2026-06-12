@@ -1,0 +1,40 @@
+{
+  "id": "koek-en-zopie",
+  "text": "https://en.wikipedia.org/wiki/Koek-en-zopie",
+  "tags": [
+    "link-only",
+    "term"
+  ],
+  "entities": [
+    {
+      "name": "koek-en-zopie",
+      "type": ""
+    },
+    {
+      "name": "Нидерланды",
+      "type": "COUNTRY"
+    },
+    {
+      "name": "горячий шоколад",
+      "type": ""
+    }
+  ],
+  "cards": [
+    {
+      "question": "На голландском льду палатки, где продают еду и напитки конькобежцам, называют ЭТИМ — на нидерландском.",
+      "answer": "koek-en-zopie",
+      "logic": "Link-only: термин из Wikipedia; язык объявлен."
+    },
+    {
+      "question": "Традиционные ларьки с едой и питьём на замёрзших каналах ставят в ЭТОЙ стране.",
+      "answer": "Нидерланды",
+      "logic": "География из Wikipedia; без «koek» в вопросе."
+    },
+    {
+      "question": "Сейчас в таких ларьках на льду чаще всего продают, среди прочего, ЭТО.",
+      "answer": "горячий шоколад",
+      "logic": "Современное наполнение ларьков из Wikipedia."
+    }
+  ],
+  "status": "golden"
+}
