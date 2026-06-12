@@ -29,7 +29,13 @@ def cmd_index_rebuild(_: argparse.Namespace) -> int:
 
 
 def cmd_prepare_batch(args: argparse.Namespace) -> int:
-    stats = batch.prepare_batch(args.batch)
+    stats = batch.prepare_batch(
+        args.batch,
+        from_telegram=args.from_telegram,
+        seed=args.seed,
+        count=args.count,
+        force=args.force,
+    )
     print(json.dumps(stats, ensure_ascii=False, indent=2))
     return 0
 
@@ -90,8 +96,20 @@ def main(argv: list[str] | None = None) -> int:
     pr = p_rebuild.add_parser("rebuild")
     pr.set_defaults(func=cmd_index_rebuild)
 
-    p = sub.add_parser("prepare-batch", help="Prepare batch draft from queue")
+    p = sub.add_parser("prepare-batch", help="Prepare batch draft from queue or Telegram export")
     p.add_argument("--batch", default="001")
+    p.add_argument(
+        "--from-telegram",
+        action="store_true",
+        help="Sample random messages from telegram-export-json/result.json",
+    )
+    p.add_argument("--seed", type=int, default=None, help="Random seed for --from-telegram")
+    p.add_argument("--count", type=int, default=None, help="Messages per batch (default 5)")
+    p.add_argument(
+        "--force",
+        action="store_true",
+        help="Empty shell draft even without --from-telegram (ignore cards-llm)",
+    )
     p.set_defaults(func=cmd_prepare_batch)
 
     p = sub.add_parser("build-prompt", help="Build RAG prompt for Cursor")

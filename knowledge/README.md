@@ -16,8 +16,11 @@ pip install -r knowledge/requirements.txt
 # 1. Импорт parsing-examples, quizlet-modules, rules, candidates
 python -m knowledge bootstrap
 
-# 2. Подготовить batch 001 (5 сообщений) + draft для ревью
+# 2a. Batch из candidates (cards-llm пилот)
 python -m knowledge prepare-batch --batch 001
+
+# 2b. Batch из случайных сообщений result.json (без старых генераций)
+python -m knowledge prepare-batch --batch 003 --from-telegram --seed 99
 
 # 3. Собрать RAG-prompt для Cursor
 python -m knowledge build-prompt --batch 001

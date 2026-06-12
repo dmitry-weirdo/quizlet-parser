@@ -39,5 +39,7 @@ TEXT_PARSING_GUIDE = ROOT / "docs" / "text_parsing_guide.md"
 QUIZLET_MODULES = ROOT / "quizlet-modules"
 ENTITIES_QUEUE = ROOT / "cursor" / "entities-llm" / "entities_queue.json"
 GENERATE_PROMPT_TEMPLATE = ROOT / "cursor" / "cards-llm" / "generate_cards_prompt.md"
+TELEGRAM_EXPORT = ROOT / "telegram-export-json" / "result.json"
+SAMPLED_BATCHES = KNOWLEDGE / "sampled_batches.json"
 
 BATCH_SIZE = 5
