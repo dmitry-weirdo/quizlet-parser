@@ -1,0 +1,16 @@
+{
+  "batches": [
+    {
+      "batch": "batch-003",
+      "seed": 99,
+      "message_ids": [
+        2298,
+        2104,
+        579,
+        3949,
+        401
+      ],
+      "source": "telegram-export-json/result.json"
+    }
+  ]
+}
